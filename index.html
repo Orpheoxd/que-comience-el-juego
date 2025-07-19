@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Que comience el juego</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 {
+      color: #333;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 250px;
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Que comience el juego</h1>
+  <p>Introduce la palabra clave:</p>
+  <input type="text" id="clave" placeholder="Palabra clave">
+  <br>
+  <button onclick="verificarClave()">Enviar</button>
+  <div class="error" id="mensajeError"></div>
+
+  <script>
+    function verificarClave() {
+      const clave = document.getElementById("clave").value.trim().toLowerCase();
+      const mensajeError = document.getElementById("mensajeError");
+
+      if (clave === "verde") {
+        window.location.href = "https://www.canva.com/design/DAGtpJfwfPc/Lcjan2Lfm3XmTAdu3-IWkg/edit?utm_content=DAGtpJfwfPc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton";
+      } else if (clave === "azul") {
+        window.location.href = "https://www.canva.com/design/DAGtpBuvpRY/Z98uBSnXshRoFLYI2iu1Gg/edit?utm_content=DAGtpBuvpRY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton";
+      } else {
+        mensajeError.textContent = "Palabra clave incorrecta. Intenta de nuevo.";
+      }
+    }
+  </script>
+</body>
+</html>
